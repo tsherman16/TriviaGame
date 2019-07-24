@@ -1,31 +1,32 @@
 body {
-    background-image: url("Arizona_Cardinals_logo.jpg");
-    background-repeat: repeat;
+    background-image: url("https://target.scene7.com/is/image/Target/GUEST_a4f7cc85-b58b-4a58-a607-c9af54bbc862?wid=488&hei=488&fmt=pjpeg"); 
+    background-repeat: repeat; 
     background-attachment: fixed;
+    height: 100%;
 }
 
 .mainTitle {
     font-family: 'Crimson Text', 'Libre Baskerville', serif;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 90px;
 }
 
 .titleBackground {
     background-color: #97233f;
-    padding: 80px;
+    padding: 30px;
 }
 
 .btn-primary {
-    background-color: #97233f;
+    background-color: black;
     color: white;
-    margin-top: 60px;
+    margin-top: 200px;
     padding: 20px;
 }
 
 .question-display {
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-    background-color:black;
-    color: #97233f;
+    padding: 30px;
+    margin-top: 150px;
+    background-color: #97233f;
+    color: white;
 }
