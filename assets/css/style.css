@@ -12,7 +12,8 @@ body {
 }
 
 .titleBackground {
-    background-color: #97233f;
+    background-color: black;
+    color: #97233f;
     padding: 30px;
 }
 
@@ -25,8 +26,18 @@ body {
 
 .question-display {
     text-align: center;
+    font-weight: bold;
     padding: 30px;
     margin-top: 150px;
     background-color: #97233f;
     color: white;
+}
+
+.q1 {
+    line-height: 5;
+}
+
+#Timer {
+    font-size: 30px;
+    color: black;
 }

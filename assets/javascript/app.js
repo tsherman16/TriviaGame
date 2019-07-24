@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //variables==========================================
+    //variables======================================================================
     var trivia = {
         correct: 0,
         incorrect: 0,
@@ -8,7 +8,7 @@ $(document).ready(function () {
         counter: 0,
         questionIndex: 0,
         Q1: {
-            question: "The Arizona Cardinals moved to the Grand Canyon state in:", 
+            question: "The Arizona Cardinals moved to the Grand Canyon state in:",
             choices: ["1977", "1988", "1991"],
             answer: "1988"
         },
@@ -74,6 +74,7 @@ $(document).ready(function () {
         }
     }
 
+    //Start game=======================================================================
     $(".question-display").hide();
     $(document).on("click", "#startGame1", function () {
         $(".question-display").show();
@@ -83,7 +84,7 @@ $(document).ready(function () {
     });
 
 
-    //functions=================================================
+    //functions==================================================================
     function countdown() {
         clearInterval(trivia.counter);
         var count = 15;
@@ -93,7 +94,7 @@ $(document).ready(function () {
             if (count <= 0) {
                 trivia.questionIndex++;
                 trivia.unanswered++;
-                alert("Times Up!");
+                alert("Times Up! Get faster before the season!");
                 clearInterval(trivia.counter);
                 Q_and_A();
             }
@@ -101,14 +102,11 @@ $(document).ready(function () {
         }
     }
 
-
-
-    function Q_and_A () {
+    function Q_and_A() {
         emptyElement(".q1");
         emptyElement(".a1");
         emptyElement(".a2");
         emptyElement(".a3");
-        emptyElement(".a4");
 
         countdown();
 
@@ -127,10 +125,10 @@ $(document).ready(function () {
         var userAnswer = $(this).text();
         if (trivia.getQuestionObject(trivia.questionIndex).answer === userAnswer) {
             trivia.correct++;
-            alert("You are correct!");
+            alert("Correct! #fanfavorite #loyalfan");
         } else {
             trivia.incorrect++;
-            alert("You are incorrect!");
+            alert("Try harder next time! #bandwagonfan");
         }
         trivia.questionIndex++;
         clearInterval(trivia.counter);
@@ -141,15 +139,14 @@ $(document).ready(function () {
         }
     })
 
-    function endGame () {
+    function endGame() {
         emptyElement(".q1");
         emptyElement(".a1");
         emptyElement(".a2");
         emptyElement(".a3");
-        emptyElement(".a4");
         emptyElement("#Timer");
 
-        $(".q1").text("Results")
+        $("#Timer").text("Results")
         $(".a1").text("Correct: " + trivia.correct);
         $(".a2").text("Incorrect: " + trivia.incorrect);
         $(".a3").text("Unanswered: " + trivia.unanswered);
