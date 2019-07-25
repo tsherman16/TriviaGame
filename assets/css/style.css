@@ -41,3 +41,12 @@ body {
     font-size: 30px;
     color: black;
 }
+
+.choices {
+    padding: 10px;
+    width: 200px;
+    background-color: black;
+    color: #97233f;
+    font-family: 'Crimson Text', 'Libre Baskerville', serif;
+    font-size: 20px
+}

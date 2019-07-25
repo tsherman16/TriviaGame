@@ -87,7 +87,7 @@ $(document).ready(function () {
     //functions==================================================================
     function countdown() {
         clearInterval(trivia.counter);
-        var count = 15;
+        var count = 10;
         trivia.counter = setInterval(timer, 1000);
         function timer() {
             count--;
@@ -128,7 +128,7 @@ $(document).ready(function () {
             alert("Correct! #fanfavorite #loyalfan");
         } else {
             trivia.incorrect++;
-            alert("Try harder next time! #bandwagonfan");
+            alert("WRONG! Answer is " + trivia.getQuestionObject(trivia.questionIndex).answer);
         }
         trivia.questionIndex++;
         clearInterval(trivia.counter);
